@@ -12,8 +12,67 @@ def hangryman():
     guess_word = []
     for letter in chosen_word:
         guess_word.append("_")
-    # Debug print statement
-    print("Debug: The chosen word is", chosen_word)
-    
+    print("The word you need to guess has", len(chosen_word), "characters")
+    print(' '.join(guess_word))
+    tries = 6
+    guessed_letters = []
+  
+    # # Debug print statement
+    # print("Debug: The chosen word is", chosen_word)
+
+# ASCII hangman art imported from chrishorton (GitHub Gist)
+stages = ['''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========''']
+
+print(stages)
+
 hangryman()
 

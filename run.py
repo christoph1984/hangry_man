@@ -1,5 +1,9 @@
 import random
 
+tries = 6
+
+guessed_letters = []
+
 def hangryman():
     word_list = ["Spaghetti", "Guacamole", "Biscotti", "Zucchini", "Tiramisu",
                  "Hamburger", "Croissant", "Quesadilla", "Sushi", "Barbecue", 
@@ -14,9 +18,8 @@ def hangryman():
         guess_word.append("_")
     print("The word you need to guess has", len(chosen_word), "characters")
     print(' '.join(guess_word))
-    tries = 6
-    guessed_letters = []
-  
+    # tries = 6
+    # guessed_letters = []
     # # Debug print statement
     # print("Debug: The chosen word is", chosen_word)
 
@@ -72,7 +75,11 @@ stages = ['''
       |
 =========''']
 
-print(stages)
+# print(stages)
+
+while tries > 0:
+    print("You have", tries, "tries left")
+    guess = input("Guess a letter or the whole word: ")
 
 hangryman()
 

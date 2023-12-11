@@ -80,6 +80,22 @@ stages = ['''
 while tries > 0:
     print("You have", tries, "tries left")
     guess = input("Guess a letter or the whole word: ")
+    if guess in guessed_letters:
+        print("You've already guessed this letter.")
+        continue
+    guessed_letters.append(guess)
+    if len(guess) == 1:
+        correct_guess = False
+    for i in range(len(chosen_word)):
+        if chosen_word[i] == guess:
+            guess_word[i] = guess
+            correct_guess = True
+    print(' '.join(guess_word))
+    if correct_guess:
+        print("Good job! You've guessed a letter correctly.")
+    else:
+        tries -= 1
+        print("Wrong guess. You have", tries, "tries left")
 
 hangryman()
 

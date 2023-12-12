@@ -12,6 +12,8 @@ guessed_letters = []
 
 chosen_word = random.choice(word_list).lower()
 
+guess_word = ["_"] * len(chosen_word)
+
 def hangryman():
     random_number = random.randint(0, len(word_list)-1)
     chosen_word = word_list[random_number]

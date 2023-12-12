@@ -83,6 +83,7 @@ stages = ['''
 # print(stages)
 
 while tries > 0:
+    print(stages[6-tries])
     print("You have", tries, "tries left")
     guess = input("Guess a letter or the whole word: ")
     if guess in guessed_letters:

@@ -20,8 +20,8 @@ def hangryman():
     guess_word = []
     for letter in chosen_word:
         guess_word.append("_")
-    print("The word you need to guess has", len(chosen_word), "characters")
-    print(' '.join(guess_word))
+    print("\nThe word you need to guess has", len(chosen_word), "characters\n")
+    print(' '.join(guess_word), "\n")
     # tries = 6
     # guessed_letters = []
     # # Debug print statement
@@ -83,11 +83,11 @@ stages = ['''
 # print(stages)
 
 while tries > 0:
-    print(stages[6-tries])
-    print("You have", tries, "tries left")
+    print("\n", stages[6-tries])
+    print("\nYou have", tries, "tries left\n")
     guess = input("Guess a letter or the whole word: ")
     if guess in guessed_letters:
-        print("You've already guessed this letter.")
+        print("\nYou've already guessed this letter.\n")
         continue
     guessed_letters.append(guess)
     if len(guess) == 1:
@@ -98,21 +98,21 @@ while tries > 0:
             correct_guess = True
     print(' '.join(guess_word))
     if correct_guess:
-        print("Good job! You've guessed a letter correctly.")
+        print("\nGood job! You've guessed a letter correctly.\n")
     else:
         tries -= 1
-        print("Wrong guess. You have", tries, "tries left")
+        print("\nWrong guess. You have", tries, "tries left\n")
 
     if len(guess) == len(chosen_word):
         if guess == chosen_word:
-            print("Congratulations, you won!")
+            print("\nCongratulations, you won!\n")
             break
         else:
             tries -= 1
             print("Wrong guess. You have", tries, "tries left")
 
     if tries == 0:
-            print(stages[6])
-            print("You lost! The word was:", chosen_word)
+            print("\n", stages[6])
+            print("\nYou lost! The word was:", chosen_word, "\n")
 
 hangryman()

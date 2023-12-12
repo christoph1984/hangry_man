@@ -4,9 +4,10 @@ tries = 6
 
 guessed_letters = []
 
+
 def hangryman():
     word_list = ["Spaghetti", "Guacamole", "Biscotti", "Zucchini", "Tiramisu",
-                 "Hamburger", "Croissant", "Quesadilla", "Sushi", "Barbecue", 
+                 "Hamburger", "Croissant", "Quesadilla", "Sushi", "Barbecue",
                  "Cheesecake", "Risotto", "Pancakes", "Kimchi",
                  "Ratatouille", "Falafel", "Gazpacho",
                  "Macarons", "Goulash", "Bruschetta"]
@@ -22,6 +23,7 @@ def hangryman():
     # guessed_letters = []
     # # Debug print statement
     # print("Debug: The chosen word is", chosen_word)
+
 
 # ASCII hangman art imported from chrishorton (GitHub Gist)
 stages = ['''
@@ -97,5 +99,12 @@ while tries > 0:
         tries -= 1
         print("Wrong guess. You have", tries, "tries left")
 
-hangryman()
+    if len(guess) == len(chosen_word):
+        if guess == chosen_word:
+            print("Congratulations, you won!")
+            break
+        else:
+            tries -= 1
+            print("Wrong guess. You have", tries, "tries left")
 
+hangryman()

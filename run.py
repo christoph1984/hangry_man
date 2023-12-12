@@ -1,17 +1,18 @@
 import random
 
-tries = 6
-
-guessed_letters = []
-
-
-def hangryman():
-    word_list = ["Spaghetti", "Guacamole", "Biscotti", "Zucchini", "Tiramisu",
+word_list = ["Spaghetti", "Guacamole", "Biscotti", "Zucchini", "Tiramisu",
                  "Hamburger", "Croissant", "Quesadilla", "Sushi", "Barbecue",
                  "Cheesecake", "Risotto", "Pancakes", "Kimchi",
                  "Ratatouille", "Falafel", "Gazpacho",
                  "Macarons", "Goulash", "Bruschetta"]
 
+tries = 6
+
+guessed_letters = []
+
+chosen_word = random.choice(word_list).lower()
+
+def hangryman():
     random_number = random.randint(0, len(word_list)-1)
     chosen_word = word_list[random_number]
     guess_word = []
@@ -106,5 +107,9 @@ while tries > 0:
         else:
             tries -= 1
             print("Wrong guess. You have", tries, "tries left")
+
+    if tries == 0:
+            print(stages[6])
+            print("You lost! The word was:", chosen_word)
 
 hangryman()

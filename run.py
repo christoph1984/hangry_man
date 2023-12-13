@@ -99,6 +99,11 @@ while tries > 0:
             guess_word[i] = guess
             correct_guess = True
     print(' '.join(guess_word))
+
+    if "_" not in guess_word:
+        print("\nCongratulations, you won!\n")
+        break
+    
     if correct_guess:
         print("\nGood job! You've guessed a letter correctly.\n")
     else:

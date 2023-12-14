@@ -27,15 +27,26 @@ def hangryman():
 print('''
 Welcome to Hangry Man, the most delicious hangman game you've ever played!
 
-In this game, your taste buds are put to the test as you guess food-related words. From appetizers to desserts, cuisines from around the world, and even cooking techniques, there's a smorgasbord of culinary terms waiting for you.
+In this game, your taste buds are put to the test as you guess food-related 
+words. From appetizers to desserts, cuisines from around the world, and even 
+cooking techniques, there's a smorgasbord of culinary terms waiting for you.
 
 Here's how it works:
-1. A random food-related word will be chosen, and you'll see a series of underscores representing each letter in the word.
-2. You can guess one letter at a time or try to guess the whole word. But be careful! Incorrect guesses will start to build the hangry man.
-3. With each wrong guess, our hangry man gets closer to losing his patience. You have six tries before he loses his cool.
-4. If you guess the word correctly before the hangry man is complete, you win! If not, the hangry man will have to go hungry, and you'll get to know the correct word.
+1. A random food-related word will be chosen, and you'll see a series of 
+underscores representing each letter in the word.
 
-So, put on your chef's hat, and let's get cooking! Can you guess the word before the hangry man loses his cool? Good luck, and may the best foodie win!
+2. You can guess one letter at a time or try to guess the whole word. But be 
+careful! Incorrect guesses will start to build the hangry man.
+
+3. With each wrong guess, our hangry man gets closer to losing his patience. 
+You have six tries before he loses his cool.
+
+4. If you guess the word correctly before the hangry man is complete, you win! 
+If not, the hangry man will have to go hungry, and you'll get to know the 
+correct word.
+
+So, put on your chef's hat, and let's get cooking! Can you guess the word 
+before the hangry man loses his cool? Good luck, and may the best foodie win!
 ''')
 print("\nThe word you need to guess has", len(chosen_word), "characters\n")
 print(' '.join(guess_word), "\n")

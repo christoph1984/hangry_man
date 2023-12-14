@@ -30,7 +30,11 @@ Welcome to Hangry Man, the most delicious hangman game you've ever played!
 In this game, your taste buds are put to the test as you guess food-related 
 words. From appetizers to desserts, cuisines from around the world, and even 
 cooking techniques, there's a smorgasbord of culinary terms waiting for you.
+''')
 
+show_instructions = input("Would you like to see the instructions? (yes/no): ")
+if show_instructions.lower() == "yes":
+    print('''
 Here's how it works:
 1. A random food-related word will be chosen, and you'll see a series of 
 underscores representing each letter in the word.

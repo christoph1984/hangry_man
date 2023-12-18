@@ -4,11 +4,13 @@ Hangry Man is a fun, food-themed version of the classic game Hangman. The game s
 
 ## Code Explanation
 
-1. **Import necessary modules**: The `random` module is used to select a random word from a list, and the `colorama` module is used to color the text output.
+1. **Import necessary modules**: The `random` module is used to select a random word from a list, and the `colorama` module is used to color the text output. `os` & `sys` grant improved console functionality.
 
 ```python
 import random
 from colorama import Fore, Style, init
+import os
+import sys
 ```
 
 2. **Initialize colorama**: This is necessary for the colorama module to function properly.
@@ -155,6 +157,60 @@ Python code tested and no significant errors shown. Code passed through:
 | Lose Game | Make 6 incorrect guesses | The game should inform the user that they lost and reveal the correct word | Passed |
 
 
+# Deployment
+
+The application has been deployed using a template provided by the Code Institute, allowing others to test the code.
+
+The project has been deployed on Heroku with the following steps:
+
+1. Use `pip freeze > requirements.txt` to add external libraries to the deployed app.
+2. Create a Heroku account. You can find a step-by-step guide here.
+3. Click 'New' in the top right corner of the Heroku dashboard.
+4. Click 'Create new app'.
+5. Name your app and select your region from the dropdown menu.
+6. Click 'Create new app'.
+7. Navigate to the 'settings' tab.
+8. Scroll down to the 'config vars' section and add a key: `PORT` and value: `8000`.
+9. Scroll down to the 'Buildpacks' section.
+10. Click 'Add buildpack'.
+11. Add Python as the first dependency and click 'Save changes'.
+12. Add node.js as the second dependency and save again.
+13. Select the 'Deploy' tab at the top.
+14. Select 'Github' from the 'Deployment method'.
+15. Type the name of your Github project and click 'search'.
+16. Scroll down and select the manual deployment method.
+17. Enable automatic deploys to update the project every time you push the code from Gitpod.
+18. Click to view the app.
+
+# Cloning the Repository
+
+To clone the repository:
+
+1. Navigate to the repository on Github.
+2. Click the green "Code" button above the file list.
+3. Copy the URL of the repo using HTTPS, SSH, or Github CLI.
+4. Open Git Bash.
+5. Change the current working directory to the location where you want the cloned directory.
+6. Type `git clone`, and then paste the URL you copied earlier.
+7. Press enter to create a local clone.
+
+For more details on how to clone a remote repo to create a local copy, please visit this link.
+
+# Forking
+
+To fork the repository:
+
+1. Navigate to the repository on Github.
+2. Click "Fork" located towards the top right corner.
+3. Select the "owner" for the forked repo from the dropdown menu under "owner".
+4. The forked repo will be created under the same name as the original by default, but you can type a name in the "Repository name" field or add a description in the "Description" box.
+5. Click "Create fork".
+
+Forking allows you to make changes without affecting the original project. You can suggest changes by submitting a pull request. The project owner can review the pull request before accepting the suggestions and merging them.
+
+For more details on how to fork a repo, please visit this link.
+
+Note: When you fork a repository, you don't have access to the files locally on your device. To access the files locally, you will need to clone the forked repo.
 
 
 

@@ -32,11 +32,12 @@ def hangryman():
     for letter in chosen_word:
         guess_word.append("_")
 
+
 print('''
 Welcome to Hangry Man, the most delicious hangman game you've ever played!
 
-In this game, your taste buds are put to the test as you guess food-related 
-words. From appetizers to desserts, cuisines from around the world, 
+In this game, your taste buds are put to the test as you guess food-related
+words. From appetizers to desserts, cuisines from around the world,
 there's a smorgasbord of culinary terms waiting for you.
 ''')
 
@@ -44,20 +45,20 @@ show_instructions = input("Would you like to see the instructions? (yes/no): ")
 if show_instructions.lower() == "yes":
     print('''
 Here's how it works:
-1. A random food-related word will be chosen, and you'll see a series of 
+1. A random food-related word will be chosen, and you'll see a series of
 underscores representing each letter in the word.
 
 2. You can guess one letter at a time or try to guess the whole word.
 Incorrect guesses will start to build the hangry man.
 
-3. With each wrong guess, our hangry man gets closer to losing his patience. 
+3. With each wrong guess, our hangry man gets closer to losing his patience.
 You have six tries before he loses his cool.
 
-4. If you guess the word correctly before the hangry man is complete, you win! 
-If not, the hangry man will have to go hungry, and you'll get to know the 
+4. If you guess the word correctly before the hangry man is complete, you win!
+If not, the hangry man will have to go hungry, and you'll get to know the
 correct word.
 
-So, put on your chef's hat, and let's get cooking! Can you guess the word 
+So, put on your chef's hat, and let's get cooking! Can you guess the word
 before the hangry man loses his cool? Good luck, and may the best foodie win!
 ''')
 print("\nThe word you need to guess has", len(chosen_word), "characters\n")
@@ -134,7 +135,6 @@ while tries > 0:
     if "_" not in guess_word:
         print("\nCongratulations, you won!\n")
         break
-    
     if correct_guess:
         print("\nGood job! You've guessed a letter correctly.\n")
     else:
@@ -150,7 +150,7 @@ while tries > 0:
             print("Wrong guess. You have", tries, "tries left")
 
     if tries == 0:
-         print("\n", stages[6])
-         print("\nYou lost! The word was:", chosen_word, "\n")
+        print("\n", stages[6])
+        print("\nYou lost! The word was:", chosen_word, "\n")
 
 hangryman()

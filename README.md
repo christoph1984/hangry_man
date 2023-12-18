@@ -134,6 +134,37 @@ while tries > 0:
 hangryman()
 ```
 
+## Flowchart
+[Whimsical](https://whimsical.com/) used to create a flowchart containing the core logic to aid with the building of the code
+
+![game_logic](assets/readme_files/game_logic.jpg)
+
+## Game Loop example screens
+
+**Game Intro Screen:**
+
+![intro_screen](assets/readme_files/intro_screen.jpg)
+
+**Instructions display:**
+
+![instructions_yes](assets/readme_files/instructions_yes.jpg)
+
+**Game started:**
+
+![game_start](assets/readme_files/game_start.jpg)
+
+**Mid-game:**
+
+![game_running](assets/readme_files/game_running.jpg)
+
+**Game lost:**
+
+![game_lose](assets/readme_files/game_lose.png.jpg)
+
+**Game won:**
+
+![game_win](assets/readme_files/game_win.jpg)
+
 ## Testing
 
 VALIDATOR TESTING

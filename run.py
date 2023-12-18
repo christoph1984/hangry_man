@@ -5,7 +5,7 @@ from colorama import Fore, Style, init
 init()
 
 # Set color for the entire text
-print(Fore.MAGENTA)
+print(Fore.YELLOW)
 
 word_list = [
     "Spaghetti", "Guacamole", "Biscotti", "Zucchini", "Tiramisu",

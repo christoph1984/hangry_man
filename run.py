@@ -24,12 +24,13 @@ def hangryman():
     guess_word = []
     for letter in chosen_word:
         guess_word.append("_")
+
 print('''
 Welcome to Hangry Man, the most delicious hangman game you've ever played!
 
 In this game, your taste buds are put to the test as you guess food-related 
-words. From appetizers to desserts, cuisines from around the world, and even 
-cooking techniques, there's a smorgasbord of culinary terms waiting for you.
+words. From appetizers to desserts, cuisines from around the world, 
+there's a smorgasbord of culinary terms waiting for you.
 ''')
 
 show_instructions = input("Would you like to see the instructions? (yes/no): ")
@@ -39,8 +40,8 @@ Here's how it works:
 1. A random food-related word will be chosen, and you'll see a series of 
 underscores representing each letter in the word.
 
-2. You can guess one letter at a time or try to guess the whole word. But be 
-careful! Incorrect guesses will start to build the hangry man.
+2. You can guess one letter at a time or try to guess the whole word.
+Incorrect guesses will start to build the hangry man.
 
 3. With each wrong guess, our hangry man gets closer to losing his patience. 
 You have six tries before he loses his cool.

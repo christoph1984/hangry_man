@@ -62,11 +62,6 @@ before the hangry man loses his cool? Good luck, and may the best foodie win!
 ''')
 print("\nThe word you need to guess has", len(chosen_word), "characters\n")
 print(' '.join(guess_word), "\n")
-    # tries = 6
-    # guessed_letters = []
-    # # Debug print statement
-    # print("Debug: The chosen word is", chosen_word)
-
 
 # ASCII hangman art imported from chrishorton (GitHub Gist)
 stages = [r'''
@@ -119,8 +114,6 @@ stages = [r'''
  / \  |
       |
 =========''']
-
-# print(stages)
 
 while tries > 0:
     print("\n", stages[6-tries])

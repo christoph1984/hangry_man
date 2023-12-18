@@ -1,4 +1,11 @@
 import random
+from colorama import Fore, Style, init
+
+# Initialize colorama
+init()
+
+# Set color for the entire text
+print(Fore.GREEN)
 
 word_list = [
     "Spaghetti", "Guacamole", "Biscotti", "Zucchini", "Tiramisu",

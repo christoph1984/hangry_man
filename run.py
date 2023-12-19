@@ -3,6 +3,7 @@ import random
 from colorama import Fore, Style, init
 import os
 import sys
+import textwrap
 
 # Initialize colorama for colored output
 init()
@@ -24,6 +25,7 @@ guessed_letters = []
 chosen_word = random.choice(word_list).lower()
 guess_word = ["_"] * len(chosen_word)
 
+
 # Function to reset the game
 def hangryman():
     global chosen_word
@@ -33,6 +35,18 @@ def hangryman():
     guess_word = []
     for letter in chosen_word:
         guess_word.append("_")
+
+
+print(textwrap.dedent(r'''
+ _    _   
+| |  | |                                 
+| |__| | __ _ _ __   __ _ _ __ _   _ _ __ ___   __ _ _ __
+|  __  |/ _` | '_ \ / _` | '__| | | | '_ ` _ \ / _` | '_ \
+| |  | | (_| | | | | (_| | |  | |_| | | | | | | (_| | | | |
+|_|  |_|\__,_|_| |_|\__, |_|   \__, |_| |_| |_|\__,_|_| |_|
+                    __/ |      __/ |             
+                   |___/     |___ /
+'''))
 
 # Welcome message and instructions
 print('''
@@ -125,16 +139,16 @@ stages = [r'''
 while tries > 0:
     print("\n", stages[6-tries])
     print("\nYou have", tries, "tries left\n")
-    
+
     # Get user's guess
     guess = input("Guess a letter or the whole word: ")
-   
+
     # Check for invalid input
     while guess == "" or guess == " ":
         print("Invalid input. Please enter a letter or a word.")
         guess = input("Guess a letter or the whole word: ")
 
-    # Check if the letter has been guessed before    
+    # Check if the letter has been guessed before
     if guess in guessed_letters:
         print("\nYou've already guessed this letter.\n")
         continue

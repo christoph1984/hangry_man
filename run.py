@@ -122,6 +122,9 @@ while tries > 0:
     print("\n", stages[6-tries])
     print("\nYou have", tries, "tries left\n")
     guess = input("Guess a letter or the whole word: ")
+    while guess == "" or guess == " ":
+        print("Invalid input. Please enter a letter or a word.")
+        guess = input("Guess a letter or the whole word: ")
     if guess in guessed_letters:
         print("\nYou've already guessed this letter.\n")
         continue

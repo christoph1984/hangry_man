@@ -251,7 +251,8 @@ Note: When you fork a repository, you don't have access to the files locally on 
 
 * Python For Beginners for inspiration & basic logic: https://www.pythonforbeginners.com/code-snippets-source-code/game-hangman
 * Code Review stack exchange
-* ASCII art: https://gist.github.com/chrishorton/8510732aa9a80a03c829b09f12e20d9c
+* ASCII art generator for the into image: https://patorjk.com/software/taag/#p=testall&h=3&f=Big&t=Hangryman
+* ASCII art for hangryman images: https://gist.github.com/chrishorton/8510732aa9a80a03c829b09f12e20d9c
 * Stack Overflow for general guidance
 * PEP8 Style Guide for assistance with indentation
 * W3Schools for assistance with If/Elif

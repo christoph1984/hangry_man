@@ -3,7 +3,6 @@ import random
 from colorama import Fore, Style, init
 import os
 import sys
-import textwrap
 
 # Initialize colorama for colored output
 init()
@@ -36,17 +35,17 @@ def hangryman():
     for letter in chosen_word:
         guess_word.append("_")
 
-
-print(textwrap.dedent(r'''
- _    _   
-| |  | |                                 
+# Display intro graphic
+print('\n'.join([s.rstrip() for s in r'''
+ _    _
+| |  | |
 | |__| | __ _ _ __   __ _ _ __ _   _ _ __ ___   __ _ _ __
 |  __  |/ _` | '_ \ / _` | '__| | | | '_ ` _ \ / _` | '_ \
 | |  | | (_| | | | | (_| | |  | |_| | | | | | | (_| | | | |
 |_|  |_|\__,_|_| |_|\__, |_|   \__, |_| |_| |_|\__,_|_| |_|
-                    __/ |      __/ |             
+                    __/ |      __/ |
                    |___/     |___ /
-'''))
+'''.split('\n')]))
 
 # Welcome message and instructions
 print('''

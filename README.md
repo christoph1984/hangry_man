@@ -87,14 +87,17 @@ before the hangry man loses his cool? Good luck, and may the best foodie win!
 ''')
 ```
 
-8. **Game loop**: This is the main game loop. It continues as long as the player has tries left. In each iteration, it prints the current state of the hangman, asks the player for a guess, checks if the guess is correct, and updates the game state accordingly. 
+8. **Game loop**: This is the main game loop. It continues as long as the player has tries left. In each iteration, it prints the current state of the hangman, asks the player for a guess, checks if the guess is correct, and updates the game state accordingly. This will also prompt the user if they enter a blank (invalid) choice.
 
 ```
 while tries > 0:
     print("\n", stages[6-tries])
     print("\nYou have", tries, "tries left\n")
     guess = input("Guess a letter or the whole word: ")
-    if guess in guessed_letters:
+    while guess == "" or guess == " ":
+        print("Invalid input. Please enter a letter or a word.")
+        guess = input("Guess a letter or the whole word: ")
+   if guess in guessed_letters:
         print("\nYou've already guessed this letter.\n")
         continue
     guessed_letters.append(guess)
@@ -184,6 +187,7 @@ Python code tested and no significant errors shown. Code passed through:
 | Correct Guess | Guess a letter that is in the word | The game should reveal the letter in the correct position(s) | Passed |
 | Incorrect Guess | Guess a letter that is not in the word | The game should decrement the number of tries left and display the next stage of the hangman | Passed |
 | Repeat Guess | Guess a letter that has already been guessed | The game should inform the user that the letter has already been guessed | Passed |
+| Blank Guess | User inputs a blank space as the guess | The game should inform the user that this is an invalid input | Passed |
 | Win Game | Correctly guess all the letters in the word | The game should congratulate the user for winning | Passed |
 | Lose Game | Make 6 incorrect guesses | The game should inform the user that they lost and reveal the correct word | Passed |
 
